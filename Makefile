@@ -4,7 +4,7 @@ image:
 	docker build -t $(IMAGE) .
 
 run:
-	docker run -d --name=student-list-api -p 5000:5000 -v ${PWD}/simple_api/student_age.json:/data/student_age.json $(IMAGE)
+	docker run -d --name=fake-backend -p 80:80 $(IMAGE)
 	# To let the container start before run test
 	sleep 5
 
